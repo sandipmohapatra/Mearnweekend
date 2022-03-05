@@ -1,0 +1,41 @@
+Html,css,Javascript
+BootStrap
+JQuerry
+Angular10
+ReactJs
+NodeJs
+-------------------------Html-------------------------
+
+1)Html is used for webdesigning.
+2)It is the presentation Layer.
+3)It is static to make it dynamic we have to use java/php/.net.
+4)we have predefined tags in HTML.Each tags which is opened has to be closed.
+5)Html is userFriendly.
+---------------------------------------------------------------
+Tags:-
+-------------
+1)<html></html>---------This is the starting of the html page.
+2)<body bgcolor=cyan> ---------------This is to give the body background color as cyan.
+3)<title>--------This is to give the title of the page.
+4)<h1> to <h6>---Heading tag which is bold .The size decreases as we give from h1 to h6.
+5)<center><left><right> ---This is use to allign the text.
+6)<hr color=red> ----This is use to give a horizontal line.
+7)<table> <th><tr><td>----This  will align the form in a proper order.
+<th> is the table head.
+<tr> is the table row.
+<td> is the table division.a row is divided into table divisions.
+8)<form>--This is use to send the data from the frontend to the middleware.we have to mention the middleware file name.
+middleware can be a java file,php file,python,.net.
+9)<input type=text name=t1 size=20>
+input type can be text,number,date,email......
+name=t1 .t1 is a variable.It is used to bind the data and transfer it to the middleware.
+
+10)after submit the data goes to the middleware.
+
+second.php?t1=sandip&t2=7766554433&t3=sandip%40gmail.com&t4=2022-03-13&t5=Bangalore&t6=650021
+
+11)required :- It will not proceed until you enter some data.
+
+
+
+
