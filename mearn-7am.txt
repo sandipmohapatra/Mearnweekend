@@ -35,7 +35,16 @@ name=t1 .t1 is a variable.It is used to bind the data and transfer it to the mid
 second.php?t1=sandip&t2=7766554433&t3=sandip%40gmail.com&t4=2022-03-13&t5=Bangalore&t6=650021
 
 11)required :- It will not proceed until you enter some data.
-
-
-
+---------------------------------------------------------------------------------------
+file:///C:/Users/sandip/Desktop/Mearn7am/second.php?t1=sandip&t2=7766554433&t3=sandip%40gmail.com&t4=2022-03-21&t5=Bangalore&t6=560012&t7=male&t8=cricket&t9=football&t10=Hockey&t11=Ludo
+-----------------------------------------------------------------------------------------
+file:///C:/Users/sandip/Desktop/Mearn7am/second.php?t1=sandip&t2=7766554433&t3=sandip%40gmail.com&t4=2022-03-21&t5=Bangalore&t6=560012&t7=male&t8=cricket&t11=Ludo
+----------------------------------------------
+12)<select name=t12>  dropdown
+<option value=MCA>MCA</option>
+<option value=Btech>Btech</option>
+<option value=Mtech>Mtech</option>
+<option value=MBA>MBA</option>
+</select></tr>
+--------------------------------------------------------------------
 
