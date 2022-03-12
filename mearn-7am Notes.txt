@@ -1,3 +1,6 @@
+prathiksha1704@gmail.com
+akshayadi1997@gmail.com
+--------------------------------------------------
 Html,css,Javascript
 BootStrap
 JQuerry
@@ -69,10 +72,28 @@ step 5:- Link it with your email
 step 6:-<> click to get the link
 step 7:-responses
 step 8:-create spreadsheet
-
------------------------
-https://docs.google.com/spreadsheets/d/1kaif6BWfbcUbBrnOiAN83pCdMfKHkdolanmXCt0KHPo/edit?resourcekey#gid=69109492
-
+---------------------------------------------------------------------------------
+CSS:- cascading style sheet
+----------------------------------------------
+This is used to style the html page.
+There are 3 types of css.
+1)external css:- we write outside the page and can be applicable to whole applicaton.We save the file by the extention <.css>
+2)internal css:-We write it within the page.It is applicable only for 1 page.
+3)inline css:- we write it within a line.It is applicable for a single line.
+-----------------------------------------------------------------------------------------------------------
+syntax:-
+-------------------
+h1
+{
+background-color:red;
+color:yellow;
+}
+------------------------------------------------
+h1:- selector
+within brackets it is known as declaration.
+Declaration has 2 parts:- 1)property 2)value.
+example:- background-color is property and red is the value.
+----------------------------------------------------------------------------------
 
 
 
