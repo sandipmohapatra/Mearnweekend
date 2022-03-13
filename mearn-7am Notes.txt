@@ -108,7 +108,16 @@ margin:100px 400px 150px;<-----------------top(100px),left and right(400px),bott
 margin:100px 400px ; <------------------------top and bottom(100px), right and left(400px)
 margin:1000px;<----------------------------------top,bottom,left,right(100px)
 ----------------------------------------------------------------------------------------------------------------------
-
+*css padding
+--------------------
+The css padding properties are used to generate space around the content.
+The padding clears an area around the content(inside the border) of an element.
+-------------------------------------------------------------------------
+padding-top
+padding-right
+padding-bottom
+padding-left
+-----------------------------------------------------------------------
 
 
 
