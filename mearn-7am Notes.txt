@@ -106,6 +106,7 @@ applicable for a <div> tag.
 margin:100px 400px 150px 80px;<------------top(100px),right(4000px),bottom(150px),left(80px).
 margin:100px 400px 150px;<-----------------top(100px),left and right(400px),bottom (150px)
 margin:100px 400px ; <------------------------top and bottom(100px), right and left(400px)
+margin:1000px;<----------------------------------top,bottom,left,right(100px)
 ----------------------------------------------------------------------------------------------------------------------
 
 
