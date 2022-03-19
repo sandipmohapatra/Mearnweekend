@@ -1,0 +1,44 @@
+1)we have to save the file with .html extention.
+2)java script is case sensitive.
+3)It is supported by advance browser.
+4)java script support object oriented programming.
+5)we have a datatype called var.
+6)we have lot of predefined functions and we can create userdefined function.
+7)We can create class,object and constructor in javascript.
+---------------------------------------------------------------------------------------
+css
+----------
+<html>
+<style>
+</style>
+<body>
+</body>
+</html>
+----------------------------------------------------------------------------------------------
+javascript
+---------------------
+<html>
+<script>
+</script>
+<body>
+</body>
+</html>
+-----------------------------------------------------------------------------------
+Example:-1
+---------------------------
+<html>
+<script>
+document.write("Hello welcome to javascript");
+alert("welcome to javascript");
+</script>
+<body>
+<h1><center>Welcome to javascript</center></h1>
+</body>
+</html>
+----------------------------------------------------------------------------------
+
+
+
+
+
+
