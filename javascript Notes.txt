@@ -5,6 +5,8 @@
 5)we have a datatype called var.
 6)we have lot of predefined functions and we can create userdefined function.
 7)We can create class,object and constructor in javascript.
+8)javascript with make the html page dynamic.
+9)javascipt is mostly used to validate the html page.
 ---------------------------------------------------------------------------------------
 css
 ----------
@@ -36,6 +38,42 @@ alert("welcome to javascript");
 </body>
 </html>
 ----------------------------------------------------------------------------------
+wap to enter an age and find you are elegible to vote or not.
+-----------------------------------------------------------------------------------
+wap to enter a number and find if it is even or odd.
+-----------------------------------------------------------------------------------
+example-2
+-----------------------
+<html>
+<script>
+var a;
+a=prompt("enter age");
+if(a>=18)
+document.write("you are eligilble" +a);
+else
+document.write("you are not eligilble" +a);
+</script>
+</html>
+-----------------------------------------------------------------------------
+example-3
+------------------------
+<html>
+<script>
+var a;
+a=prompt("enter a number");
+if ( a % 2 == 0)
+{
+	alert('Even Number');
+document.write("The even number is "+a);
+}
+else
+{
+	alert('Odd Number');
+document.write("The odd number is "+a);
+}
+</script>
+</html>
+--------------------------------------------------------------------------
 
 
 
