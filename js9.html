@@ -1,0 +1,63 @@
+<html>
+
+<style>
+h1{background-color:red;color:yellow;}
+body{background-color:cyan;}
+input:focus{background-color:yellow;color:red;}
+</style>
+
+<script>
+function fun()
+{
+var a=f1.t1.value;
+var b=f1.t2.value;
+var c=f1.t3.value;
+var d=f1.t4.value;
+var e=f1.t5.value;
+if(a=="")
+{
+alert("empno is empty");
+f1.t1.focus();
+}
+else if(b=="")
+{
+alert("name is empty");
+f1.t2.focus();
+}
+else if(c=="")
+{
+alert("email is empty");
+f1.t3.focus();
+}
+else if(d=="")
+{
+alert("phone no is empty");
+f1.t4.focus();
+}
+else if(e=="")
+{
+alert("address is empty");
+f1.t5.focus();
+}
+else
+{
+f1.submit();
+}
+}
+</script>
+
+<body>
+<form name="f1" action=second>
+<h1><center>Employee Registration Page</center></h1>
+<table>
+<tr><td>Enter your empno<td><input type=number name=t1 size=20></tr>
+<tr><td>Enter your name<td><input type=text name=t2 size=20></tr>
+<tr><td>Enter your email<td><input type=email name=t3 size=20></tr>
+<tr><td>Enter your phoneno<td><input type=number name=t4 size=20></tr>
+<tr><td>Enter your address<td><textarea name=t5 rows=5 cols=21></textarea></tr>
+<tr><td><td><input type=button value=submit  onclick="fun()"></tr>
+</table>
+</form>
+</body>
+
+</html>
