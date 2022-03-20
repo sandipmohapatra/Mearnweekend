@@ -1,5 +1,4 @@
 <html>
-
 <script>
 function addno()
 {
@@ -7,15 +6,38 @@ var a=parseInt(document.getElementById("t1").value);
 var b=parseInt(document.getElementById("t2").value);
 t3.value=a+b;
 }
-</script>
 
+function subno()
+{
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+t3.value=a-b;
+}
+
+function mulno()
+{
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+t3.value=a*b;
+}
+
+function divno()
+{
+var a=parseInt(document.getElementById("t1").value);
+var b=parseInt(document.getElementById("t2").value);
+t3.value=a / b;
+}
+
+</script>
 <body>
 <table>
 <tr><td>Enter a number<td><input type=text id=t1 size=20></tr>
 <tr><td>Enter a number<td><input type=text id=t2 size=20></tr>
-<tr><td><td><input type=submit value=Add onclick=addno()></tr>
+<tr><td><td><input type=submit value=Add onclick=addno()>
+<input type=submit value=Sub onclick=subno()>
+<input type=submit value=Mul onclick=mulno()>
+<input type=submit value=Div onclick=divno()></tr>
 <tr><td>Answer<td><input type=text id=t3 size=20></tr>
 </table>
 </body>
-
 </html>
