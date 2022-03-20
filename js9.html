@@ -14,11 +14,18 @@ var b=f1.t2.value;
 var c=f1.t3.value;
 var d=f1.t4.value;
 var e=f1.t5.value;
+var f=f1.t6.value;
 if(a=="")
 {
 alert("empno is empty");
 f1.t1.focus();
 }
+else if(a==0)
+{
+alert("empno invalid");
+f1.t1.focus();
+}
+
 else if(b=="")
 {
 alert("name is empty");
@@ -34,10 +41,27 @@ else if(d=="")
 alert("phone no is empty");
 f1.t4.focus();
 }
+
+else if(d.length !=10)
+{
+alert("phone no should be 10 digits");
+f1.t4.focus();
+}
+
 else if(e=="")
 {
-alert("address is empty");
+alert("Pin is empty");
 f1.t5.focus();
+}
+else if(isNaN(e))
+{
+alert("Pin should be only number");
+f1.t5.focus();
+}
+else if(f=="")
+{
+alert("Address is empty");
+f1.t6.focus();
 }
 else
 {
@@ -54,7 +78,8 @@ f1.submit();
 <tr><td>Enter your name<td><input type=text name=t2 size=20></tr>
 <tr><td>Enter your email<td><input type=email name=t3 size=20></tr>
 <tr><td>Enter your phoneno<td><input type=number name=t4 size=20></tr>
-<tr><td>Enter your address<td><textarea name=t5 rows=5 cols=21></textarea></tr>
+<tr><td>Enter your pin no<td><input type=text name=t5 size=20></tr>
+<tr><td>Enter your address<td><textarea name=t6 rows=5 cols=21></textarea></tr>
 <tr><td><td><input type=button value=submit  onclick="fun()"></tr>
 </table>
 </form>
