@@ -1,0 +1,22 @@
+<!-- Event Example1 -->
+<html>
+<script>
+function match()
+{
+var a=fm.f1.value;
+var b=fm.f2.value;
+if(a==b)
+alert("password matching");
+else
+alert("password not matching");
+fm.reset();
+}
+</script>
+<body>
+<form name="fm" onsubmit="match()">
+Enter your password :<input type=password name=f1> 
+Re-Enter your password :<input type=password name=f2> 
+<input type="submit">
+</form>
+</body>
+</html>
