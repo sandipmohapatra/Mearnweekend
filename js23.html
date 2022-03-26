@@ -3,11 +3,13 @@
 <script>
 function fun()
 {
-document.getElementById("ex1").innerHTML=Math.max(22,33,44,55,66);
+<!-- document.getElementById("ex1").innerHTML=Math.max(22,33,44,55,66);-->
+ document.getElementById("ex1").innerHTML=Math.min(22,33,44,55,66);
+
 }
 </script>
 <body>
-<p id="ex1">Find The greatest</p>
+<p id="ex1">Find The Lowest</p>
 <button onclick=fun()>Click Here</button>
 </body>
 </html>
