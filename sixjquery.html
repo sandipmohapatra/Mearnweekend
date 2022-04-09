@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head>
+<style>
+h1{color:red;}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("h1,h2,p").hide();
+    });
+ $("#btn2").click(function(){
+        $("h1,h2,p").show();
+    });
+
+});
+</script>
+</head>
+<body>
+<h1>Good Morning</h1>
+<h2>Good Morning</h2>
+<p> The text will change when you chick on Button.</p>
+<div>This is Akshaya</div>
+<button id="btn1">Click to Hide</button>
+<button id="btn2">Click to Show</button>
+</body>
+</html>
