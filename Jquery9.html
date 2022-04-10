@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+alert("Name :" +$("#t1").val());
+alert("Address :" +$("#t2").val());
+alert("Phone no:" +$("#t3").val());
+});});
+</script>
+
+<body>
+<table>
+<tr><td>Name:<td><input type=text id=t1 value="Pratiksha"></tr>
+<tr><td>Address:<td><input type=text id=t2 value="Bangalore"></tr>
+<tr><td>Phone no:<td><input type=text id=t3 value="7766554433"></tr>
+<tr><td><td><button>Submit</button></tr>
+</table>
+</body>
+</html>
