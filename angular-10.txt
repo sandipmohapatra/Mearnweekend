@@ -48,3 +48,96 @@ export class AppComponent {
   title = 'angular10';
 }
 ----------------------------------------------------------------------------------
+app.component.html
+-----------------------------------------
+<h1>Welcome to Angular-10 at BePractical</h1>
+<form action="second">
+<table>
+<tr><td>Enter your name</td><td><input type=text name=t1 size=20 required></td></tr>
+<tr><td>Enter your email</td><td><input type=text name=t2 size=20 required></td></tr>
+<tr><td>Enter your address</td><td><input type=text name=t3 size=20 required></td></tr>
+<tr><td>Enter your phoneno</td><td><input type=text name=t3 size=20 required></td></tr>
+
+<tr><td></td><td><input type=Submit value="submit"></td></tr>
+
+</table>
+</form>
+-----------------------------------------------------------
+notes
+-------------
+app.component.ts
+----------------------------------------------
+1)component is a class
+export class AppComponent 
+{
+  title = 'angular10';
+}
+-----------------------------------------------------------
+app.module.ts
+-------------------------
+It contains list of components added to the project.
+1)import { AppComponent } from './app.component';
+2)declarations: [AppComponent],
+3)bootstrap: [AppComponent]  <- which is the main file to execute.
+----------------------------------------------------------------------------------
+
+Flow :-
+step-1)index.html ------------<app-root>This is Akshya and Pratiksha</app-root>
+step-2)app.module.ts --------------------------bootstrap: [AppComponent]  <- which is the main file to execute.
+step-3)app.component.ts-------------------------selector: 'app-root',
+----------------------------------------------------------------------------------------------------------------------------------------
+to create a module
+---------------------------
+ng g c login --skipTests
+----------------------------------------------------
+automatically 3 files are created
+login.component.ts  --------------to combine html and css
+login.component.html
+login.component.css
+----------------------------------------------------------------------
+step 1)index.html change the selector.
+step 2)bootstrap: [LoginComponent]
+-------------------------------------------------------------------------------- 
+login.component.ts
+-----------------------------------
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+
+login.component.html
+---------------------------------------
+<h1>Login Page</h1><hr><hr>
+
+<form action="login">
+    <table>
+    <tr><td>Enter your name</td><td><input type=text name=t1 size=20 required></td></tr>
+    <tr><td>Enter your password</td><td><input type=password name=t2 size=20 required></td></tr>
+   
+    <tr><td></td><td><input type=Submit value="submit"></td></tr>
+    
+    </table>
+    </form>
+--------------------------------------------------------
+make changes in
+1)index.html ----the selector
+2)app.module.ts---------------------bootstrap: [LoginComponent]
+--------------------------------------------------------------------
+
+
+
+
+
+
+
