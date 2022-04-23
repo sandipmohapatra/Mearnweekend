@@ -134,6 +134,118 @@ make changes in
 1)index.html ----the selector
 2)app.module.ts---------------------bootstrap: [LoginComponent]
 --------------------------------------------------------------------
+Angular10
+------------------------
+1)Agular is an open source,cross platform.
+2)It provides end to end solution for building ,debiggig ,testing and deploying.
+3)It provides testing framework like jasmine,karma,protractor.
+4)Language used for angular is typescript.It support oops concept.
+5)Framework supported are MVC (model,view ,controller)
+6)It is used for mobile and web application.
+7)It is used for SPA(single page application)
+8)It has high speed and performance is better as compared to older technology used webpages.
+9)Angular use AOT compiler.[Ahead-of-time]
+10)It converts typescript code into efficient javascript code before building phases.
+because Browser will understand only javascript.
+11)It provides faster rendering.
+website like crizbuzz.com uses angular for cricket updates.
+----------------------------------------------------------------------------------------------------------------------
+There are 2 ways of data binding
+----------------------------------------
+1)one way binding
+2)two way binding
+
+In one way binding we have 
+1)interpolation
+2)property binding
+3)event binding
+-----------------------------------
+In two way binding we have 
+1)[(ngModule)]
+---------------------------------------------------------------------------------------------
+1)one way binding 
+i)Interpolation :- we use double curly braces {{}} and is known as interpolation or template expression.
+
+example:-
+we are assigning some value in the app.component.ts and the value is displayed on the html page.
+{{name}}
+<p>The sum of  6 and 7 is {{6+7}}</p>
+<p>The multiplication of 6 and 7 is {{6*7}}</p>
+--------------------------------------------------------------------------------------
+2)property binding
+------------------------------
+In this we use square brackets to the DOM properties.
+example:-
+<img[src]="shoe.jpg">
+-------------------------------------------------------------------------------------------
+3)event Binding
+in this we use circular brackets.It is mostly used with buttons.
+we put event in parentheses.
+example:-
+<button(click)="onSave()">Save</button>
+-----------------------------------------------------------------------------------------
+Two way binding
+-----------------------------------
+In this user can update the entry.A change made to the user entry in html page will reflect on the browser.
+
+example:-
+Enter your name<input type=text name=t1>
+Enter your name<input type=text [(ngModel)]="name">
+--------------------------------------------------------------------------------------------------
+
+example-1
+-------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-example1',
+  templateUrl: './example1.component.html',
+})
+export class Example1Component  {
+
+  public product=
+  {
+    Name:'Samsung TV',
+    Price:45000,
+    Customer:'Akshya'
+  }
+}
+-----------------------------------------------------------------
+<dl>
+    <dt>Name</dt>
+    <dd>{{product.Name}}</dd>
+    <dt>Price</dt>
+    <dd>{{product.Price}}</dd>
+    <dt>Name</dt>
+    <dd>{{product.Customer}}</dd>
+</dl>
+------------------------------------------------------
+
+1)make change in the index.html,
+2)make change in the app.module.ts
+-------------------------------------------------------------
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
