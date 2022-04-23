@@ -192,7 +192,8 @@ example:-
 Enter your name<input type=text name=t1>
 Enter your name<input type=text [(ngModel)]="name">
 --------------------------------------------------------------------------------------------------
-
+to create project:- ng g c example1 --skipTests
+-------------------------------------------------------------------
 example-1
 -------------------
 import { Component } from '@angular/core';
@@ -223,8 +224,11 @@ export class Example1Component  {
 
 1)make change in the index.html,
 2)make change in the app.module.ts
+3)to run :- ng serve
+4)on browser --------------------localhost:4200
 -------------------------------------------------------------
-
+wap to enter your details name,address,qulification,nationality,hobby etc.
+----------------------------------------------------------------------------------
 
 
 
