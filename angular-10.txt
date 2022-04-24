@@ -1,3 +1,7 @@
+https://nodejs.org/en/download/---------------windows installer -64 bits
+install visual studio code.
+--------------------------------------
+
 1)we have to install node.js
 2)On that we can install angular.
 3)node -v
@@ -229,7 +233,43 @@ export class Example1Component  {
 -------------------------------------------------------------
 wap to enter your details name,address,qulification,nationality,hobby etc.
 ----------------------------------------------------------------------------------
+Example-2
+---------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-example2',
+  template: `
+  <p> Hello my name is {{name}}</p>
+  <p> Hello my email is {{email}}</p>
+  <p> Hello my Address is {{address.street}} {{address.loc}} {{address.state}} {{address.city}}</p>
+  <p><Button (click)="sayName()">Say my Details</Button></p>`
+  
+})
+export class Example2Component 
+{
+name:String;
+email:String;
+address:any;
+constructor()
+{
+this.name='sandip Kumar';
+this.email='sandip@gmail.com';
+this.address=
+{
+  street:'MC Road',
+  loc:'Sivaji nagar',
+  state:'Karnataka',
+  city:'Bangalore'
+}
+}
+sayName()
+{
+console.log("My name is ",this.name);
+console.log("My email is ",this.email);
+console.log("My address is ",this.address);
+} }
+-------------------------------------------------------------
 
 
 
