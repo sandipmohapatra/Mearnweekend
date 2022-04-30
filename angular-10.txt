@@ -507,6 +507,67 @@ create a COVID-19 hospital
 4)Book an ambulance
 5)FeedBack
 ---------------------------------------------------------
+Myproject.ts
+---------------------
+import {Component} from '@angular/core';
+@Component ({
+    selector :'my-project',
+    template:` MENU
+<ul>
+    <li> <a [routerLink]="['/Product']">Product</a></li>
+    <li> <a [routerLink]="['/Inventory']">Inventory</a></li>
+    <li> <a [routerLink]="['/Login']">Login</a></li>
+</ul>
+<hr><hr>
+    <router-outlet></router-outlet> `
+})
+export class Myproject
+{}
+-----------------------------------------------------------------------------------------
+app.module.ts
+------------------------------
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { Example1Component } from './example1/example1.component';
+import { Example2Component } from './example2/example2.component';
+import { Example3Component } from './example3/example3.component';
+import { ProductComponent } from './product/product.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import {Myproject} from './Myproject';    <-----------------------------------------------added-------------------->
+import { RouterModule, Routes } from '@angular/router';  <------------added--------------------->
+
+const appRoutes: Routes = [						<-------------------------added------------------->
+  { path: 'Product', component: ProductComponent },
+  { path: 'Inventory', component: InventoryComponent },
+  { path: 'Login', component: LoginComponent },
+  ];
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    Example1Component,
+    Example2Component,
+    Example3Component,
+    ProductComponent,
+    InventoryComponent,
+    Myproject                         <------------------------added------------------------->
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)   ---------------------added------------------------------
+  ],
+  providers: [],
+  bootstrap: [Myproject] --------------------------added----------------------------
+})
+export class AppModule { }
+------------------------------------------------------------------------------------------------
 
 
 
