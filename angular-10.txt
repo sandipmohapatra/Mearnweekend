@@ -323,7 +323,29 @@ console.log("My email is ",this.email);
 console.log("My address is ",this.address);
 } }
 --------------------------------------------------------------
+Example-4
+-----------------------
+import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-example3',
+  templateUrl: './example3.component.html',
+  })
+export class Example3Component {
+
+  MyName : string =`sandip`;
+    appList: string[]=["Madhurima","suvajeet","koyel","subhajit"];
+
+}
+-----------------------------------------------------------------------
+<html><div>
+    My name is {{MyName}}<br />
+    My friends are {{appList[0]}}<br />
+    My friends are {{appList[1]}}<br />
+    My friends are {{appList[2]}}<br />
+    My friends are {{appList[3]}}<br />
+    </div></html>
+----------------------------------------------------------------------------------
 
 
 
