@@ -346,17 +346,160 @@ export class Example3Component {
     My friends are {{appList[3]}}<br />
     </div></html>
 ----------------------------------------------------------------------------------
+Example-5
+----------------------
+import {Component} from '@angular/core';
+@Component ({
+    selector :'my-app',
+    template:` MENU <ul>
+    <li> <a [routerLink]="['/Product']">Product</a></li>
+    <li> <a [routerLink]="['/Inventory']">Inventory</a></li>
+    </ul><hr><hr>
+    <router-outlet></router-outlet> `
+})
+export class AppComponent
+{}
+----------------------------------------------------------------------------------------------------------
+product.component.ts
+-------------------------------------------------------------------------------------------------------------
+import { Component } from '@angular/core';
+@Component ({
+selector: 'my-app',
+template: `<form>
+<table>
+<tr><td><label>Product ID:</label><td>
+<input type="text" name="pid" size=20 /><br /></tr>
+
+<tr><td><label>Product Name:</label><td>
+<input type="text" name="pname" size=20 /><br /></tr>
+<tr><td><label>Product Unit:</label><td>
+
+<input type="text" name="punit" size=20 /><br /></tr>
+<tr><td><label>Product Price:</label><td>
+
+<input type="text" name="pprice" size=20 /><br /></tr>
+<tr><td><td><input type="submit" value="submit" /><br /></tr>
+</table>
+</form>
+`
+,
+})
+export class Appproduct {
+}
+------------------------------------------------------------
+Inventory.component.ts
+----------------------------------------
+import { Component } from '@angular/core';
+@Component ({
+selector: 'my-app',
+template: `<form>
+<table>
+<tr><td><label>Inventory ID:</label><td>
+<input type="text" name="pid" size=20 /><br /></tr>
+<tr><td><label>Inventory Name:</label><td>
+<input type="text" name="pname" size=20 /><br /></tr>
+<tr><td><label>Inventory Unit:</label><td>
+<input type="text" name="punit" size=20 /><br /></tr>
+<tr><td><label>Inventory Price:</label><td>
+<input type="text" name="pprice" size=20 /><br /></tr>
+<tr><td><td><input type="submit" value="submit" /><br /></tr>
+</table>
+</form>` 
+
+})
+export class AppInventory {
+}
+----------------------------------------------------------------------------------
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent }  from './app.component';
+import {FormsModule} from  '@angular/forms';
+
+import { Appproduct } from './product.component'
+import { AppInventory } from './Inventory.component'
+import { RouterModule, Routes } from '@angular/router'; 
+
+const appRoutes: Routes = [
+  { path: 'Product', component: Appproduct },
+  { path: 'Inventory', component: AppInventory },
+  ];
 
 
+@NgModule({
+  imports:      [ BrowserModule , RouterModule.forRoot(appRoutes)],
+  declarations: [ AppComponent ,Appproduct,AppInventory],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+-------------------------------------------------------------------------------------------------------------
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent }  from './app.component';
+import { Appproduct } from './product.component'
+import { AppInventory } from './Inventory.component'
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: 'Product', component: Appproduct },
+  { path: 'Inventory', component: AppInventory },
+  ];
 
 
- 
+@NgModule({
+  imports:      [ BrowserModule , RouterModule.forRoot(appRoutes)],
+  declarations: [ AppComponent ,Multiplierpipe ,Appproduct,AppInventory],
+  bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+-----------------------------------------------------------------------------
+Routing :-
+-----------------------
+Navigating from one page to other page.
+in website we have Homepage,about us,contact us,product,inventry,login,registration.
+-----------------------------------------------------------------------------------------------------------------
+Angular we call it Single Page Application(SPA)
+-----------------------------------------------------------------------------------------------------
+Homepage-------mainpage only have the navigation details with hyper-links
+-----------------------------------------------------------------------------------------------------
+Example:-
+------------------------------------------------------------------
+import {Component} from '@angular/core';
+@Component ({
+    selector :'my-app',
+    template:` MENU
+<ul>
+    <li> <a [routerLink]="['/Product']">Product</a></li>
+    <li> <a [routerLink]="['/Inventory']">Inventory</a></li>
+    <li> <a [routerLink]="['/Login']">Login</a></li>
+</ul>
+<hr><hr>
+    <router-outlet></router-outlet> `
+})
+export class AppComponent
+{}
+--------------------------------------------------------------------------------------------
+1) <router-outlet> :- It creates space for your webpages to load/render----product page,Inventory page,login page.
+ 2) "['/Product']" :- we have to define the path in the module.ts
+-----------------------------------------------------------------------------------------------
+app.module.ts
+-----------------------
+import { RouterModule, Routes } from '@angular/router';
 
-
-
-
-
-
+const appRoutes: Routes = [
+  { path: 'Product', component: ProductComponent },
+  { path: 'Inventory', component: InventoryComponent },
+  { path: 'Login', component: LoginComponent },
+  ];
+------------------------------------------------------------------------------------------------------
+step 2:-
+--------------
+imports:      [ BrowserModule , RouterModule.forRoot(appRoutes)],
+--------------------------
+step -3:-
+------------------
+BootStrap[Myproject]
+-----------------------------------------------------------------------------
 
 
 
