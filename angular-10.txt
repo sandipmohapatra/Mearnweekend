@@ -500,7 +500,13 @@ step -3:-
 ------------------
 BootStrap[Myproject]
 -----------------------------------------------------------------------------
-
+create a COVID-19 hospital
+1)regsitration
+2)doctor time table
+3)book a Bed
+4)Book an ambulance
+5)FeedBack
+---------------------------------------------------------
 
 
 
