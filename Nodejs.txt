@@ -30,3 +30,116 @@ example-2
 console.log("Hello Students");
 console.log("This is weekend Nodejs Batch");
 --------------------------------------------------------------------
+example-3
+-------------------
+var buffer1 = new Buffer('apple');
+var buffer2 = new Buffer('apple1');
+var result = buffer1.compare(buffer2);
+if(result == 0)
+{
+    console.log("Both the strings are equal");
+}
+else
+{
+console.log("Both are not equal");
+}
+------------------------------------------------------------------------------
+example-4
+------------------
+var buffer1 = new Buffer('sandip');
+var buffer2 = new Buffer(' Kumar');
+var buffer3=Buffer.concat([buffer1,buffer2]);
+console.log("buffer3 is :"+buffer3.toString());
+-----------------------------------------------------------------------------------
+My sql connctivity
+---------------------------------------
+step 1:- npm install mysql
+
+example-1
+--------------------------
+var mysql = require('mysql');
+var con=mysql.createConnection({
+
+    host:"localhost",
+    user:"root",
+    password:"1234"
+});
+
+con.connect(function (err)
+{
+if(err) throw err;
+console.log("Data base connected");
+
+});
+
+---------------------------------------------------------------------------
+example-2
+---------------------
+var mysql = require('mysql');
+var con=mysql.createConnection({
+
+    host:"localhost",
+    user:"root",
+    password:"1234"
+});
+
+con.connect(function (err)
+{
+if(err) throw err;
+console.log("Database connected");
+con.query("create database weekend",function(err,result)
+{
+if(err) throw err;
+console.log("Database created");
+});
+});
+---------------------------------------------------------------------------
+example-3
+--------------------------
+var mysql = require('mysql');
+var con=mysql.createConnection({
+
+    host:"localhost",
+    user:"root",
+    password:"1234",
+    database:"weekend"
+});
+
+con.connect(function (err)
+{
+if(err) throw err;
+console.log("Database connected");
+var sql = "create table student(rollno int,name varchar(30),address varchar(30))";
+con.query(sql,function(err,result)
+{
+if(err) throw err;
+console.log("Table created");
+});
+});
+------------------------------------------------------------------------------------------------------------------
+example-4
+-----------------
+var mysql = require('mysql');
+var con=mysql.createConnection({
+
+    host:"localhost",
+    user:"root",
+    password:"1234",
+    database:"weekend"
+});
+
+con.connect(function (err)
+{
+if(err) throw err;
+console.log("Database connected");
+var sql = "insert into student values(101,'sandip','bangalore')";
+con.query(sql,function(err,result)
+{
+if(err) throw err;
+console.log("row inserted");
+});
+});
+------------------------------------------------------------------------------------------------
+
+
+
