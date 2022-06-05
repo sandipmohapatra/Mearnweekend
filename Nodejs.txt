@@ -25,3 +25,8 @@ res.write("This is Akshya and Pratiksha");
 res.end();
 }).listen(8090);
 ----------------------------------------------------------------------------
+example-2
+-----------------------
+console.log("Hello Students");
+console.log("This is weekend Nodejs Batch");
+--------------------------------------------------------------------
