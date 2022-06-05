@@ -16,6 +16,10 @@ step 2:-node first.js
 -------------------------------------------------------
 example-1
 --------------------
+step 1:npm install http
+step 2:node first.js
+step 3:localhost:8090
+---------------------------------- 
 var http=require('http');
 http.createServer(function (req,res)
 {
