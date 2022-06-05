@@ -1,0 +1,27 @@
+1)nodejs is a cross-platform environment and library for running javascript application.
+2)It is used for creating network and serverside application.
+3)Nodejs is a middleware. Where as javascript,reactjs,angularjs are the frontend.
+4)Nodejs is serverside scripting language which is used to build scalable program.
+5)it is webapplication framework build on google chrome javascript engine.
+6)In nodejs we have 4 layers.
+i)client layer:- The client layer contains web browser,mobile browser or application which can make an HTTP request to the web server.
+ii)server layer:-The server layer contains the web server which can intercept the request made by client and return back the response.
+iii)business layer:-it contains the application server.this layer interact with the data layer
+iv)data layer:-The data layer contains the database where the data are stored.
+-------------------------------------------------------------------------------
+how to create a node program
+---------------------------------------------
+step 1:- notepad first.js
+step 2:-node first.js
+-------------------------------------------------------
+example-1
+--------------------
+var http=require('http');
+http.createServer(function (req,res)
+{
+res.writeHead(200,{'Content-Type':'text/html'});
+res.write("This is weekend Nodejs Batch");
+res.write("This is Akshya and Pratiksha");
+res.end();
+}).listen(8090);
+----------------------------------------------------------------------------
