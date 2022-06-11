@@ -144,6 +144,52 @@ console.log("row inserted");
 });
 });
 ------------------------------------------------------------------------------------------------
+var mysql = require('mysql');
+var con=mysql.createConnection({
 
+    host:"localhost",
+    user:"root",
+    password:"1234",
+    database:"weekend"
+});
 
+con.connect(function(err)
+ {
+  if (err) throw err;
+var abc="SELECT * FROM student WHERE address = 'bangalore' ";
+  con.query(abc,function (err, result) 
+{
+    if (err) throw err;
+    console.log(result);
+  });
+});
+----------------------------------------------------------------------------------------------------------------------------------
+step 1:-import myql package
+var mysql = require('mysql');
+--------------------------------------------------------------------
+step 2:-establish connection
+var con=mysql.createConnection({
 
+    host:"localhost",
+    user:"root",
+    password:"1234",
+    database:"weekend"
+});
+-------------------------------------------------------------------------
+step 3:-with the help of con variable we are going to write a query and execute it.
+
+con.connect(function(err)
+ {
+  if (err) throw err; <------if there is error in connection it will display the error.
+var abc="SELECT * FROM student WHERE address = 'bangalore' ";  <- variable where the query is stored.
+  
+-------------------------------------------------------------------------------------------------------------
+step 4:-
+con.query(abc,function (err, result)  <----to execute the query or it will give an error 
+{
+    if (err) throw err;
+    console.log(result);
+  });
+});
+
+-------------------------------------------------------------------------------------------------------------
