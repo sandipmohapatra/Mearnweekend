@@ -144,6 +144,8 @@ console.log("row inserted");
 });
 });
 ------------------------------------------------------------------------------------------------
+example-5
+------------------------
 var mysql = require('mysql');
 var con=mysql.createConnection({
 
@@ -193,3 +195,23 @@ con.query(abc,function (err, result)  <----to execute the query or it will give 
 });
 
 -------------------------------------------------------------------------------------------------------------
+example-6
+----------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host:"localhost",
+    user:"root",
+    password:"1234",
+    database:"weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM student ORDER BY name DESC", function (err, result) 
+{
+    if (err) throw err;
+    console.log(result);
+  });
+});
+---------------------------------------------------------------------------------------
