@@ -215,3 +215,201 @@ con.connect(function(err) {
   });
 });
 ---------------------------------------------------------------------------------------
+example-7
+----------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host:"localhost",
+    user:"root",
+    password:"1234",
+    database:"weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM student ORDER BY address asc", function (err, result) 
+{
+    if (err) throw err;
+    console.log(result);
+  });
+});
+------------------------------------------------------------
+example-8
+--------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "DELETE FROM student WHERE name like  '%ya' ";
+
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records deleted: " + result.affectedRows);
+  });
+});
+---------------------------------------------------------------------------------
+example-8
+--------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "DELETE FROM student WHERE name like  's%' ";
+
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records deleted: " + result.affectedRows);
+  });
+});
+------------------------------------------------------------------------------------------------
+example-9
+--------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "DELETE FROM student WHERE rollno is=101";
+
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records deleted: " + result.affectedRows);
+  });
+});
+------------------------------------------------------------------------------------------
+example-10
+----------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "DROP TABLE student";
+  con.query(sql, function (err, result) 
+{
+    if (err) throw err;
+    console.log("Table deleted");
+  });
+});
+--------------------------------------------------------------------------------------------------------
+example-11
+-------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "UPDATE student SET address = 'UK' WHERE name = 'Sandip' ";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result.affectedRows + " record(s) updated");
+  });
+});
+---------------------------------------------------------------------
+example-12
+--------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "select count(*) from student";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
+-----------------------------------------
+example-13
+------------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "update student set phoneno=7766553300 where name in('sandip','guru')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
+------------------------------------------------------------------------
+example-14
+------------------------
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "1234",
+  database: "weekend"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "alter table student add phoneno int";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
+});
+------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
