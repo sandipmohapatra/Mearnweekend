@@ -653,7 +653,26 @@ db.close();
 ----------------------------------------------------------------------------------------------
 example-3
 -------------------------
+var MongoClient=require('mongodb').MongoClient;
 
+var url="mongodb://localhost:27017/weekendBatch";
+
+MongoClient.connect(url,function(err,db)
+{
+if(err) throw err;
+var dbo=db.db("weekendBatch");
+var myobj=[{name:"akshya",address:"bangalore",email:"akshya@gmail.com"},
+{name:"guru",address:"bangalore",email:"guru@gmail.com"},
+{name:"Pratiksha",address:"bangalore",email:"pratiksha@gmail.com"}];
+
+dbo.collection("student").insert(myobj,function(err,res)
+{
+if(err) throw err;
+console.log("row inserted :"+res.insertedCount);
+db.close();
+});
+});
+--------------------------------------------------------------------------------------
 
 
 
