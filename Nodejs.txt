@@ -188,7 +188,8 @@ location VARCHAR(30) DEFAULT NULL,
 PRIMARY KEY(studid,NAME)
 );
 ------------------------------End Of MySql-----------------------------------
-
+*npm install mysql
+-----------------------------------
 example-1
 --------------------------
 var mysql = require('mysql');
@@ -617,6 +618,8 @@ db.student.update({email:'sunil@gmail.com'},{$set:{password:'sunil@1'}});
 10)to delete the document
 db.student.remove({username:'susmita'});
 ----------------------------------------------------------------
+npm install mongodb
+---------------------------------------
 example-1
 ----------------------
 var MongoClient=require('mongodb').MongoClient;
