@@ -673,8 +673,29 @@ db.close();
 });
 });
 --------------------------------------------------------------------------------------
+findOne():- This is used to display the first record in the collection.
+---------------------------------------------------------------------------------------
+example-4
+-------------------------
+var MongoClient=require('mongodb').MongoClient;
 
+var url="mongodb://localhost:27017/weekendBatch";
 
+MongoClient.connect(url,function(err,db)
+{
+if(err) throw err;
+var dbo=db.db("weekendBatch");
+dbo.collection("student").findOne({},function(err,res)
+{
+if(err) throw err;
+console.log("First Name is:"+res.name);
+console.log("First Address is:"+res.address);
+console.log("First email is:"+res.email);
+db.close();
+});
+});
+
+------------------------------------------------------------------------------------
 
 
 
