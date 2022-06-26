@@ -696,7 +696,48 @@ db.close();
 });
 
 ------------------------------------------------------------------------------------
+example-5
+---------------------
+find by name
+---------------------
+var MongoClient=require('mongodb').MongoClient;
 
+var url="mongodb://localhost:27017/weekendBatch";
+
+MongoClient.connect(url,function(err,db)
+{
+if(err) throw err;
+var dbo=db.db("weekendBatch");
+var qry={name:"akshya"};
+dbo.collection("student").find(qry).toArray(function(err,res)
+{
+if(err) throw err;
+console.log(res);
+db.close();
+});
+});
+-------------------------------------------------------------------------
+example-6
+---------------------
+find by address
+---------------------
+var MongoClient=require('mongodb').MongoClient;
+
+var url="mongodb://localhost:27017/weekendBatch";
+
+MongoClient.connect(url,function(err,db)
+{
+if(err) throw err;
+var dbo=db.db("weekendBatch");
+var qry={address:"bangalore"};
+dbo.collection("student").find(qry).toArray(function(err,res)
+{
+if(err) throw err;
+console.log(res);
+db.close();
+});
+});
+-------------------------------------------------------------------------
 
 
 
