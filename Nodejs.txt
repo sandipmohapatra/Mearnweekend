@@ -738,7 +738,48 @@ db.close();
 });
 });
 -------------------------------------------------------------------------
+example-7
+-------------------
+sorting in (1)ascending and (-1)descending order
+-------------------------------------------------------------
+var MongoClient=require('mongodb').MongoClient;
 
+var url="mongodb://localhost:27017/weekendBatch";
+
+MongoClient.connect(url,function(err,db)
+{
+if(err) throw err;
+var dbo=db.db("weekendBatch");
+var qry={email: 1};
+dbo.collection("student").find().sort(qry).toArray(function(err,res)
+{
+if(err) throw err;
+console.log(res);
+db.close();
+});
+});
+------------------------------------------------------------------------
+example-8
+-------------------
+sorting in (1)ascending and (-1)descending order
+-------------------------------------------------------------
+var MongoClient=require('mongodb').MongoClient;
+
+var url="mongodb://localhost:27017/weekendBatch";
+
+MongoClient.connect(url,function(err,db)
+{
+if(err) throw err;
+var dbo=db.db("weekendBatch");
+var qry={email: -1};
+dbo.collection("student").find().sort(qry).toArray(function(err,res)
+{
+if(err) throw err;
+console.log(res);
+db.close();
+});
+});
+------------------------------------------------------------------------
 
 
 
