@@ -825,7 +825,7 @@ db.close();
 ---------------------------------------------------------------------------------------------------------------------
 To display 2 records in the collection
 ----------------------------------------------------------
-example-10
+example-11
 --------------------------
 var MongoClient=require('mongodb').MongoClient;
 
@@ -839,6 +839,25 @@ dbo.collection("student").find().limit(2).toArray(function(err,res)
 {
 if(err) throw err;
 console.log(res);
+db.close();
+});
+});
+----------------------------------------------------------------
+example-12
+--------------------------
+var MongoClient=require('mongodb').MongoClient;
+
+var url="mongodb://localhost:27017/weekendBatch";
+
+MongoClient.connect(url,function(err,db)
+{
+if(err) throw err;
+var dbo=db.db("weekendBatch");
+dbo.collection("student").drop(function(err,delOK)
+{
+if(err) throw err;
+if(delOK)
+console.log("table/collection deleted");
 db.close();
 });
 });
