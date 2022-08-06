@@ -212,9 +212,70 @@ render()
 
 export default App4;
 --------------------------------------------
+example-6
+--------------------
+import React,{Component} from 'react';
+class App extends Component{
+  render(){
+    return(
+    <div>
+<h1 className="MyReact">{35+56}</h1>
 
+    </div>
+    );
+  }
+}
 
+export default App;
+--------------------------------------------------
+React Component
+---------------------------------
+Every react component is a core building block of the react application.
+Every react component have their own structure ,methods as well as APIs.
+They can be reused as per requirement.
+ Here root is the starting component, and each of the other pieces becomes branches which are further divided into sub branches.
 
+There are two types of components in react.
+1)functional component:- It is also known as stateless component because they do not hold or manage state.
+2)class component:- They are more complex than functional components.It is required to extend from React.Component.
+we can create a class by defining a class that extends component and has a render function.
+------------------------------------------------------------------------------
+example-1
+----------------
+import React,{ Component } from 'react';
+import './App.css';
+class App extends React.Component{
+  render(){
+    return(
+    <div>
+<h1><center>Example of class</center> </h1>
+<First/>
+<Second/>
+    </div>
+    );
+  }
+}
+class First extends React.Component{
+  render() {
+    return(
+<div>
+<h2>This is an example of First React class Component</h2>
+</div>
+    );
+  }
+}
+class Second extends React.Component{
+  render()  {
+    return(
+<div>
+<h2>This is an example of Second React class Component</h2>
+</div>
+    );
+  }
+}
+
+export default App;
+------------------------------------------------------------------
 
 
 
