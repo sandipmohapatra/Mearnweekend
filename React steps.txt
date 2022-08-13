@@ -241,7 +241,7 @@ There are two types of components in react.
 we can create a class by defining a class that extends component and has a render function.
 The class component is also known as stateful component  because that can hold or manage the local state.
 ------------------------------------------------------------------------------
-example-1
+example-7
 ----------------
 import React,{ Component } from 'react';
 import './App.css';
@@ -294,7 +294,7 @@ constructor():- It is a method used to initialize an object state in a class.It 
 React Map :- it is  a collection type where data is stored in the form of pairs.It contains a unique key.The value stored in the map should be mapped to the key.It cannot store dupilcate pair in the map.It is used for storing and searching of data.
 ---------------------------------------------------------------------------
 
-example-2
+example-8
 ----------------------
 import React, { Component } from 'react';  
 class App extends React.Component {  
@@ -342,6 +342,8 @@ export default App;
 Changing the state:-
 We can change the component state by using the setState() method and passing a new state object as the argument. Now, create a new method toggleDisplayBio() in the above example and bind this keyword to the toggleDisplayBio() method otherwise we can't access this inside toggleDisplayBio() method.
 --------------------------------------------------
+example-9
+---------------------
 import React, { Component } from 'react';  
 class App extends React.Component {  
  constructor() {  
@@ -375,6 +377,8 @@ class App extends React.Component {
 }  
 export default App;  
 --------------------------------------------------------------------------------------------------
+example-10
+-------------------------
 loops array in react
 ------------------------------------------------
 import React from 'react';  
@@ -399,7 +403,7 @@ function App() {
      
 export default App;  
 -----------------------------------------------------------------------------------
-example-2
+example-11
 -------------------
 import React from 'react';  
     
@@ -456,6 +460,8 @@ npm install axios
 ------------------------------------------------
 Axios :- It is used for http delete request.We have to use the React library.It can build the interface which can send the http request from our application.
 --------------------------------------------------------------------------------------------------------------
+example-12
+-----------------------------------------------
 import React from 'react';  
     
 import axios from 'axios';  
